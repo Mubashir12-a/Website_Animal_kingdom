@@ -1,0 +1,590 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6vw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #111111;
+}
+
+#navbar {
+  background-color: #222222;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 0.2vw solid white;
+  height: 5vw;
+}
+
+#navbar h1 {
+  font-size: 3vw;
+  width: 40%;
+  color: white;
+  padding: 1% 2%;
+}
+
+#navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+#navbar span {
+  font-size: 2vw;
+  /* background-color: rgba(255, 255, 255, 0.379); */
+  border-radius: 20px;
+  padding: 0.5vw 1vw;
+  transition: all 0.5s;
+}
+
+#navbar span:hover {
+  background-color: rgba(255, 255, 255, 0.585);
+  transition: all 0.5s;
+}
+
+#navbar span:hover a {
+  color: black;
+}
+
+#about {
+  width: 90%;
+  margin: 1vw auto;
+  border: 0.5vw solid #222222;
+  border-radius: 20px;
+  background-color: #222222;
+}
+
+#about p {
+  font-size: 1.5vw;
+  color: rgba(255, 255, 255, 0.555);
+  padding: 3vw;
+  text-align: justify;
+}
+
+#about p span {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.8vw;
+  letter-spacing: 0.2vw;
+}
+
+#animals,
+#insects {
+  height: 40vw;
+  width: 90vw;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin: 5vw auto;
+  overflow: hidden;
+  border: 0.5vw solid black;
+  border-radius: 20px;
+}
+
+#animals {
+  background: url("animals-img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#insects {
+  background: url("insects/bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#plants {
+  height: 40vw;
+  width: 90vw;
+  display: flex;
+  justify-content: flex-end;
+  background: url("plants-img/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin: 5vw auto;
+  overflow: hidden;
+  border: 0.5vw solid black;
+  border-radius: 20px;
+}
+
+#animals h1,
+#insects h1 {
+  font-size: 5vw;
+  color: white;
+  text-shadow: 0px 0px 5px blue;
+  -webkit-text-stroke: 0.3vw black;
+  margin: 1vw 0 0 3vw;
+}
+
+#plants h1 {
+  font-size: 5vw;
+  color: white;
+  text-shadow: 0px 0px 5px blue;
+  -webkit-text-stroke: 0.3vw black;
+  margin: 1vw 3vw 0 0;
+}
+
+#animals #circle,
+#insects #circle_3 {
+  /* background-color: red; */
+  height: 100%;
+  width: 45%;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5vw solid white;
+  transform: translateX(175%) rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#plants #circle_2 {
+  /* background-color: red; */
+  height: 100%;
+  width: 45%;
+  position: absolute;
+  border-radius: 50%;
+  border: 0.5vw solid white;
+  transform: translateX(-175%) rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background: white;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  position: absolute;
+  border: .5vw solid black;
+}
+
+.box-1 {
+  transform: translateX(-100%);
+  background: url("animals-img/1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-2 {
+  transform: translateY(100%) rotate(-90deg);
+  background: url("animals-img/2.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-3 {
+  transform: translateX(100%) rotate(-180deg);
+  background: url("animals-img/3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-4 {
+  transform: translateY(-100%) rotate(-270deg);
+  background: url("animals-img/4.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.box-5 {
+  transform: translateX(-100%) rotate(180deg);
+  background: url("plants-img/mons.png");
+  background-position: center;
+  background-size: cover;
+}
+.box-6 {
+  transform: translateY(100%) rotate(90deg);
+  background: url("plants-img/snake.png");
+  background-position: center;
+  background-size: cover;
+}
+.box-7 {
+  transform: translateX(100%) rotate(0deg);
+  background: url("plants-img/zz.png");
+  background-position: center;
+  background-size: cover;
+}
+.box-8 {
+  transform: translateY(-100%) rotate(-90deg);
+  background: url("plants-img/aloe.png");
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+.box-9 {
+  transform: translateX(-100%) rotate(0deg);
+  background: url("insects/ant.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-10 {
+  transform: translateY(100%) rotate(-90deg);
+  background: url("insects/beetle.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-11 {
+  transform: translateX(100%) rotate(-180deg);
+  background: url("insects/butterfly.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.box-12 {
+  transform: translateY(-100%) rotate(-270deg);
+  background: url("insects/fly.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+
+
+#info_1,
+#info_3 {
+  position: absolute;
+  width: 70%;
+  height: 80%;
+  margin: 10% 3%;
+}
+
+#info_2 {
+  position: absolute;
+  width: 65%;
+  height: 80%;
+  right: 0;
+  margin: 10% 0;
+}
+
+.info_1-box,
+.info_2-box,
+.info_3-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.316);
+  backdrop-filter: blur(3px);
+  border-radius: 20px;
+}
+
+.info_1-box h3,
+.info_2-box h3,
+.info_3-box h3 {
+  font-size: 3vw;
+  color: black;
+}
+
+.info_1-box p,
+.info_2-box p, 
+.info_3-box p {
+  font-size: 1.5vw;
+  color: black;
+  text-align: justify;
+  padding: 0 1vw;
+}
+
+.info_1-box:nth-child(1),
+.info_2-box:nth-child(1),
+.info_3-box:nth-child(1) {
+  opacity: 1;
+}
+.info_1-box:nth-child(2),
+.info_2-box:nth-child(2),
+.info_3-box:nth-child(2) {
+  opacity: 0;
+}
+.info_1-box:nth-child(3),
+.info_2-box:nth-child(3),
+.info_3-box:nth-child(3) {
+  opacity: 0;
+}
+.info_1-box:nth-child(4),
+.info_2-box:nth-child(4),
+.info_3-box:nth-child(4) {
+  opacity: 0;
+}
+
+
+
+
+
+section {
+  background: url("aquatic/background.png");
+  background-position: center;
+  background-size: cover;
+  height: 40vw;
+  width: 90%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  border: .3vw solid rgb(24, 24, 97);
+  border-radius: 3vw;
+}
+
+section #header {
+  background: rgba(255, 255, 255, 0.397);
+  border-radius: 0 0 20px 20px;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+section #header div:nth-child(1) {
+  /*background-color: red;*/
+  font-size: 5vw;
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  color: black;
+}
+
+section #header div:nth-child(2) {
+  display: flex;
+  /*background-color: white;*/
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+section #header div:nth-child(2) img {
+  height: 4vw;
+  width: 4vw;
+  border-radius: 50%;
+}
+
+.header-body {
+  /*background-color: grey;*/
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 70%;
+  margin: 0 5%;
+  position: absolute;
+}
+
+.header-body .discription {
+  /*background-color: red;*/
+  width: 50%;
+  height: 50%;
+  font-size: 1.5vw;
+  text-align: justify;
+  padding: 1vw;
+  border-radius: 2vw;
+  position: absolute;
+  top: 17%;
+  color: black;
+  background-color: rgba(0, 221, 255, 0.523);
+  backdrop-filter: blur(3px);
+  border: .3vw solid cyan;
+}
+
+.discription span {
+  display: block;
+  font-size: 3vw;
+  font-weight: bold;
+  color: rgb(29, 40, 120);
+}
+
+.header-body img {
+  /*background-color: green;*/
+  height: 70%;
+  width: 50%;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 15%;
+  filter: drop-shadow(0px 0px 2vw cyan) drop-shadow(0px 0px 1vw white);
+}
+
+.block-4 img {
+  width: 30%;
+}
+.block-3 img {
+  width: 40%;
+}
+.block-2 img {
+  right: -2vw;
+}
+
+.block-1 {
+  opacity: 1;
+}
+.block-2 {
+  opacity: 0;
+}
+.block-3 {
+  opacity: 0;
+}
+.block-4 {
+  opacity: 0;
+}
+
+
+
+#birds {
+  height: 40vw;
+  width: 90%;
+  background-color: white;
+  display: flex;
+  border: .5vw solid black;
+  border-radius: 2vw;
+  overflow: hidden;
+  margin: 5vw auto;
+}
+
+#birds .bird-box {
+  height: 100%;
+  width: 25%;
+  transition: all .5s;
+  position: relative;
+  /*background-color: green;*/
+  z-index: 4;
+  overflow: hidden;
+}
+
+#birds .bird-box p {
+  font-size: 1.3vw;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 2vw 0 0;
+  width: 50%;
+  font-weight: 400;
+  text-align: justify;
+  padding: .6vw;
+  position: absolute;
+  opacity: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: .5vw solid white;
+  border-bottom: none;
+  border-left: none;
+}
+
+#birds .bird-box:nth-child(1) p {
+  background: rgba(255, 255, 255, 0.317);
+  border-color: rgba(255, 255, 255, 0.317);
+}
+
+#birds .bird-box:nth-child(2) p {
+  background: rgba(3, 71, 119, 0.317);
+  border-color: rgba(3, 71, 119, 0.317);
+}
+
+#birds .bird-box:nth-child(3) p {
+  background: rgba(3, 113, 36, 0.317);
+  border-color: rgba(3, 113, 36, 0.317);
+}
+
+#birds .bird-box:nth-child(4) p {
+  background: rgba(96, 113, 3, 0.317);
+  border-color: rgba(96, 113, 3, 0.317);
+}
+
+#birds div .filter {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(252, 252, 252, 0.24);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+#birds div .text {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*background-color: yellow;*/
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#birds div .text h2 {
+  text-align: center;
+  transform: rotate(270deg);
+  font-size: 3vw;
+  font-weight: bold;
+  letter-spacing: 1vw;
+  /*background-color: red;*/
+}
+
+#birds .bird-box:nth-child(1) {
+  background: url("birds/parrot.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#birds .bird-box:nth-child(2) {
+  background: url("birds/eagle.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#birds .bird-box:nth-child(3) {
+  background: url("birds/sparrow.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#birds .bird-box:nth-child(4) {
+  background: url("birds/woodcutter.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loader span {
+  font-size: 10vw;
+  letter-spacing: 3vw;
+  color: red;
+  font-weight: bold;
+  animation: animateLoader 2s linear infinite;
+}
